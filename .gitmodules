@@ -4,3 +4,6 @@
 [submodule "paris"]
 	path = paris
 	url = https://github.com/tbonald/paris.git
+[submodule "EAGCN"]
+	path = EAGCN
+	url = https://github.com/Luckick/EAGCN.git

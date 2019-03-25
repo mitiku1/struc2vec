@@ -1,3 +1,6 @@
 [submodule "MVGCN"]
 	path = MVGCN
 	url = https://github.com/sheryl-ai/MVGCN.git
+[submodule "paris"]
+	path = paris
+	url = https://github.com/tbonald/paris.git

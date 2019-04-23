@@ -194,8 +194,8 @@ def create_graph_info(args, users_info):
         graph_name = graph_name.upper()
         if not graph_name in graphs_meta: # Currently this does not work for attributed graphs
             continue
-        if not os.path.exists(os.path.join(args.output_dir, graph_name)):
-            os.makedirs(os.path.join(args.output_dir, graph_name))
+        if not os.path.exists(os.path.join(args.output_dir, "graphs", graph_name)):
+            os.makedirs(os.path.join(args.output_dir, "graphs",  graph_name))
         
         if args.format == "json":
             with open(os.path.join(args.graphs_dir,graph_file), "r") as g_file:
@@ -206,8 +206,10 @@ def create_graph_info(args, users_info):
 
         edge_list, adjacent_list = create_edge_adjacent_list(
             args, graph, users2index, graphs_meta[graph_name]["weighted"])
-        edge_list_filename = os.path.join(args.output_dir, graph_name, "edge-list.txt")
-        adjacent_list_filename = os.path.join(args.output_dir, graph_name, "adjacent-list.txt")
+        edge_list_filename = os.path.join(
+            args.output_dir, "graphs",  graph_name, "edge-list.txt")
+        adjacent_list_filename = os.path.join(
+            args.output_dir, "graphs",  graph_name, "adjacent-list.txt")
         save_lists(edge_list, edge_list_filename)
         save_lists(adjacent_list, adjacent_list_filename)
 

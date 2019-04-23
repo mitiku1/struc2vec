@@ -7,3 +7,9 @@
 [submodule "EAGCN"]
 	path = EAGCN
 	url = https://github.com/Luckick/EAGCN.git
+[submodule "deepwalk"]
+	path = deepwalk
+	url = https://github.com/phanein/deepwalk.git
+[submodule "node2vec"]
+	path = node2vec
+	url = https://github.com/aditya-grover/node2vec

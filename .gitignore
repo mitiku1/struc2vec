@@ -2,3 +2,5 @@
 *.pickle
 *.log
 .DS_Store
+logs/*
+resources/*

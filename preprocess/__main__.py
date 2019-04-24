@@ -168,9 +168,11 @@ def create_edge_adjacent_list(args, graph, users2index, weighted = False):
                 weights = graph[n1][n2]
                 if type(weights) == list:
                     if len(weights) > 0:
-                        weights = np.mean(weights)
+                        weights = np.mean(weights)+np.finfo(np.float32).eps
                     else:
-                        weights = 0
+                        raise ValueError("Edge (%s, %s) has zeros weight"%(n1, n2))
+                        
+
                 edge_list.append([n1_index, n2_index, weights])
             else:
                 edge_list.append([n1_index, n2_index])
